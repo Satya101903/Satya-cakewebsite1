@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Bakery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image" href="data:image/jpeg;base64,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">
+    <link rel="stylesheet" href="style.css">
+     <!--bootstrap links-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <!--bootstrap links-->
+     <!-- fonts links-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Uchen&display=swap" rel="stylesheet">
+     <!-- fonts links-->
+      <!--icon links-->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <!--icon links-->
+      <!--animation links-->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <!--animation links-->
+</head>
+<body>
+    <div class="all-content">
+        <!--navbar-->
+        <nav class="navbar navbar-expand-md"id="navbar"data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#" id="logo"><img src="data:image/jpeg;base64,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"alt="" width="50px">Cake Bakery</a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fa-solid fa-bars" style="color: #d6dae1;"></i>
+            </button>
+          
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <!--dropdown-->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                    Category
+                    </a>
+                    <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Birthday Cake</a>
+                    <a href="#" class="dropdown-item">Chocolate Cake</a>
+                    <a href="#" class="dropdown-item">Slice Cake</a>
+                    <a href="#" class="dropdown-item">Cup-Cake Tower</a>
+                    </div>
+                </li>
+                <!--dropdown-->
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+              </ul>
+            </div>
+            <div class="icons1">
+                <i class="fa-solid fa-user" style="color: #e3e5e8;"></i>
+                <i class="fa-solid fa-heart" style="color: #fafcff;"></i>
+                <i class="fa-solid fa-cart-shopping" style="color: #fcfcfc;"></i>
+            </div>
+            
+        
+          </nav>
+        <!--navbar End-->
+        
+
+        <!--home section-->
+       <div class="container-fluid">
+    <div class="Home">
+        <div class="content"data-aos="zoom-in"><br>
+            <h3>Delicious
+                <br>Cakes Bakery
+            </h3>
+            <h2 style="color: rgb(209, 186, 127);"> Customization is also available<span class="change content"></span></h2>
+        <p>Yummy sweeties delivered
+            to your dining table!
+        </p>
+        <br>
+        <a href="#" class="btn">Order Now</a>
+        <div class="img"data-aos="zoom-out">
+            <img style="float: right;"src="images/Cake1.png" alt=""width=40% height="400px">
+        </div>
+        </div>
+    </div>
+     </div>
+        <!--home section End-->
+        <!---top cards-->
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4 m-5"data-aos="fade-up"
+        data-aos-duration="1500">
+            <div class="col">
+              <div class="card">
+                <img src="https://img.freepik.com/free-photo/assortment-pieces-cake_114579-47569.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" height="300px">
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://img.freepik.com/free-photo/dessert-sweet-cake-tasty-bakery-soft_53876-30292.jpg?ga=GA1.1.516164247.1730120656&semt=ais_hybrid" height="300px">
+                </div>
+              </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://img.freepik.com/free-photo/chocolate-strawberry-cheesecake-plate-garnished-with-strawberry-syrup_140725-1319.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" height="300px">           
+                </div>
+              </div>
+            </div>
+            <!--banner-->
+            <div class="banner" data-aos="fade-up"
+            data-aos-duration="2000">
+             <div class="content">
+                <h3>Delicious Cake</h3>
+                <h2>UPTO 50% OFF</h2>
+                <p> Buy One Get One Free On Limited Time Offer Upto <span style="color: crimson;">Dec 1st</span></p>
+                <div id="btnorder"><button> Order Now</button></div>
+             </div>
+    <div class="img">
+        <img src="https://img.freepik.com/free-photo/front-view-sweet-chocolate-cake_23-2148834059.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt="">
+    </div>
+            </div>
+    <!--banner End-->
+    <!--product cards-->
+    <section id="product-cards"data-aos="fade-up"
+    data-aos-duration="1500">
+        <div class="container">
+            <h1>CAKES</h1>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa-solid fa-eye" style="color: #f2f2f2;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa-regular fa-heart" style="color: #ebedef;"></i></button>
+                            <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i class="fa-solid fa-cart-shopping" style="color: #e8ecf2;"></i></button>
+                        </div>
+                        <img src="https://img.freepik.com/free-photo/side-view-strawberry-cake-with-pistachio-crumbs-table_140725-12103.jpg?ga=GA1.1.516164247.1730120656&semt=ais_hybrid" alt=""height="190px">
+                    <div class="card-body">
+                        <h3>Cream Cake</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star "></i>
+                        </div>
+                        <p>"Experience the taste of heaven with every bite- a creamy cake crafted for pure delight." </p>
+                        <h6> Rs-600/- <span><button>Add Cart</button></span></h6>
+                    </div>
+                 </div>
+                </div>
+   <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa-solid fa-eye" style="color: #f2f2f2;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa-regular fa-heart" style="color: #ebedef;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i class="fa-solid fa-cart-shopping" style="color: #e8ecf2;"></i></button>
+                        </div>
+                        <img src="https://img.freepik.com/free-photo/apricot-blueberry-cake-with-fresh-blueberries-apricot-fruits_114579-10221.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt=""height="190px">
+                    <div class="card-body">
+                        <h3>Blue-berry Cake</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star "></i>
+                        </div>
+                        <p>These are dried plums with a bit of naturally sweet Blueberry Juice infused into it.</p>
+                        <h6> Rs-550/- <span><button>Add Cart</button></span></h6>
+                    </div>
+                 </div>
+                </div>
+   <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa-solid fa-eye" style="color: #f2f2f2;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa-regular fa-heart" style="color: #ebedef;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i class="fa-solid fa-cart-shopping" style="color: #e8ecf2;"></i></button>
+                        </div>
+                        <img src="https://img.freepik.com/free-photo/ice-cream-mango-cake_1203-8827.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt=""height="190px">
+                    <div class="card-body">
+                        <h3> Pistachio Cake</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star "></i>
+                            <i class="bx bxs-star "></i>
+                        </div>
+                        <p>Taste our browned butter yellow cake with a little apricot, and see what you think." </p>
+                        <h6> Rs-750/- <span><button>Add Cart</button></span></h6>
+                    </div>
+                 </div>
+                </div>
+   <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa-solid fa-eye" style="color: #f2f2f2;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa-regular fa-heart" style="color: #ebedef;"></i></button>
+                            <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i class="fa-solid fa-cart-shopping" style="color: #e8ecf2;"></i></button>
+                        </div>
+                        <img src="https://img.freepik.com/free-photo/side-view-fruit-cake-with-strawberry-kiwi-cup-tea-rag-napkins_176474-3095.jpg?ga=GA1.1.516164247.1730120656&semt=ais_hybrid" alt="" height="190px">
+                    <div class="card-body">
+                        <h3>Fruit Cake</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                        </div>
+                        <p>Fresh and fruity cake delight! · “Savoring the fruity goodness in every slice! </p>
+                        <h6> Rs-500/- <span><button>Add Cart</button></span></h6>
+                    </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    <!--product cards end-->
+    <!--categories-->
+    <section id="product-cards"data-aos="fade-up"
+    data-aos-duration="1500">
+        <div class="container">
+            <h1>Our Categories</h1>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa-solid fa-eye" style="color: #f2f2f2;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa-regular fa-heart" style="color: #ebedef;"></i></button>
+                            <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i class="fa-solid fa-cart-shopping" style="color: #e8ecf2;"></i></button>
+                        </div>
+                        <img src="https://img.freepik.com/free-photo/joyful-birthday-celebration-with-delicious-chocolate-cake-generative-ai_188544-9589.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt=""height="170px">
+                    <div class="card-body">
+                        <h3>Birthday Cakes</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                        </div>
+                        <p>We offer a wide range of delicious & visually appealing Birthday Cakes </p>
+                        <h6> Rs-750/- <span><button>Add Cart</button></span></h6>
+                    </div>
+                 </div>
+                </div>
+  <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa-solid fa-eye" style="color: #f2f2f2;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa-regular fa-heart" style="color: #ebedef;"></i></button>
+                            <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i class="fa-solid fa-cart-shopping" style="color: #e8ecf2;"></i></button>
+                        </div>
+                        <img src="https://img.freepik.com/free-photo/front-view-delicious-chocolate-cake-concept_23-2148746722.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt="">
+                    <div class="card-body">
+                        <h3>Chocolate Cakes</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                        </div>
+                        <p>A chocolate cake is the ultimate treat for chocolate Lovers! </p>
+                        <h6> Rs-850/- <span><button>Add Cart</button></span></h6>
+                    </div>
+                 </div>
+                </div>
+                <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa-solid fa-eye" style="color: #f2f2f2;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa-regular fa-heart" style="color: #ebedef;"></i></button>
+                            <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i class="fa-solid fa-cart-shopping" style="color: #e8ecf2;"></i></button>
+                        </div>
+                        <img src="https://img.freepik.com/free-photo/assortment-pieces-cake_114579-30701.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt="">
+                    <div class="card-body">
+                        <h3>Slice Cakes</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                        </div>
+                        <p> Chocolate,Strawberry,Vanilla,Butterscotch & many more. <br>Pick any flavour at just </p>
+                        <h6 style="font-size: 18px;"> Rs-150/-<span><button>Add Cart</button></span></h6>
+                    </div>
+                 </div>
+                </div>
+      <div class="col-md-3 py-3 py-md-0">
+                    <div class="card">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa-solid fa-eye" style="color: #f2f2f2;"></i></button>
+                           <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Wishlist"><i class="fa-regular fa-heart" style="color: #ebedef;"></i></button>
+                            <br>
+                            <button type="button" class="btn btn-secondary" title="Add to Cart"><i class="fa-solid fa-cart-shopping" style="color: #e8ecf2;"></i></button>
+                        </div>
+                        <img src="https://img.freepik.com/free-photo/cupcakes-with-white-cream-orange-glaze_8353-681.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt="" height="170px">
+                    <div class="card-body">
+                        <h3>Cup-Cake Tower</h3>
+                        <div class="star">
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star checked"></i>
+                            <i class="bx bxs-star "></i>
+                        </div>
+                        <p> A  Gorgeous Birthday Cake and Numbers Cupcake Tree. <br>Pick any flavour at just </p>
+                        <h6 style="font-size: 18px;"> Rs-100/-<span><button>Add Cart</button></span></h6>
+                    </div>
+                 </div>
+                </div>
+                </div>
+            </section>
+                <!--categories ends-->
+                    <!--gallery-->
+                    <section id="gallery"data-aos="fade-up"
+                    data-aos-duration="1500">
+                        <div class="container">
+                            <h1>OUR GALLERY</h1>
+                            <div class="row" style="margin-top: 30px;">
+                                <!-- First Row with 3 Columns -->
+                                <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                        <div class="overlay">
+                                            <h3 class="text-center">Donuts</h3>
+                                        </div>
+                                        <img src="https://img.freepik.com/free-photo/flat-lay-composition-tasty-donuts_23-2148194250.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                        <div class="overlay">
+                                            <h3 class="text-center">Chocolates</h3>
+                                        </div>
+                                        <img src="https://img.freepik.com/free-photo/top-view-cookies-plate-with-nuts-black-background_176474-3954.jpg?ga=GA1.1.516164247.1730120656&semt=ais_hybrid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                        <div class="overlay">
+                                            <h3 class="text-center">Ice Creams</h3>
+                                        </div>
+                                        <img src="https://img.freepik.com/free-photo/from-scoops-ice-cream-with-chocolate-drops-strawberry-gypsophila-ice-cream-cup_176474-2651.jpg?ga=GA1.1.516164247.1730120656&semt=ais_hybrid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 30px;">
+                                <!-- Second Row with 3 Columns -->
+                                <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                        <div class="overlay">
+                                            <h3 class="text-center">Cheese Cakes</h3>
+                                        </div>
+                                        <img src="https://img.freepik.com/free-photo/front-view-tasty-oreo-cheesecakes-inside-white-plate-brown-surface_140725-14508.jpg?ga=GA1.1.516164247.1730120656&semt=ais_hybrid" alt="" height="338px">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                        <div class="overlay">
+                                            <h3 class="text-center">Wedding Cakes</h3>
+                                        </div>
+                                        <img src="https://img.freepik.com/free-photo/view-3d-wedding-cake-with-decorations-ornaments_23-2151518855.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 py-3 py-md-0">
+                                    <div class="card">
+                                        <div class="overlay">
+                                            <h3 class="text-center">Thick Shakes</h3>
+                                        </div>
+                                        <img src="https://img.freepik.com/free-photo/four-different-cocktail-smoothies-with-milky-cream-top_114579-1097.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            <!--gallery ends-->
+            <!--About-->
+            <div class="container" id="about"data-aos="fade-up"
+            data-aos-duration="1500">
+                <h1> ABOUT US</h1>
+                <div class="row">
+                    <div class="col-md-5 py-3 py-md-0">
+                        <div class="card">
+                            <img src="https://img.freepik.com/free-photo/delicious-chocolate-cake-with-flowers_23-2150727568.jpg?ga=GA1.1.1364464788.1731476194&semt=ais_hybrid" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6 py-3 py-md-0">
+                        <p>Cake is often served as a celebratory dish on ceremonial occasions, such as weddings, anniversaries, and birthdays. There are countless cake recipes; some are bread-like, some are rich and elaborate, and many are centuries old. Cake making is no longer a complicated procedure; while at one time considerable labor went into cake making, baking equipment and directions have been simplified so that even the most amateur of cooks may bake a cake.  </p>
+                        <div id="bt"><button>Know more..</button></div>
+                    </div>
+                </div>
+            </div>
+        <!--about ends-->
+                           <!--contact-->
+                           <div class="container" id="contact"data-aos="fade-up"
+                           data-aos-duration="1500">
+                            <h1> CONTACT US</h1>
+                            <div class="row">
+                                <div class="col-md-4 py-1 py-md-0">
+                                    <div class="form-group">
+                                        <input type="Text" class="form-control" id="usr" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 py-1 py-md-0">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="eml"placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 py-1 py-md-0">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" id="phn"placeholder="Phone">
+                                    </div>
+                                </div>
+                           </div>
+                           <div class="form-group">
+                            <textarea class="form-control" rows="5" id="comment" placeholder="Share your feedback"></textarea>
+                        </div>
+                        <div id="messagebtn"><button>Send your feedback</button></div>
+                    </div>
+                    <!--content end-->
+                             <!--footer-->
+                           <footer id="footer">
+                                <h1 class="text-center"> Cake Bakery</h1>
+                                <p class="text-center">"Taste the art of Perfection". </p>
+                                       <div class="icons text-center">
+                                        <i class="fa-brands fa-skype" style="color: #63E6BE;"></i>
+                                         <i class="fa-brands fa-facebook" style="color: #2c8ed8;"></i>
+                                         <i class="fa-brands fa-google" style="color: #da2316;"></i>
+                                         <i class="fa-brands fa-square-twitter" style="color: #74C0FC;"></i>
+                                         <i class="fa-brands fa-instagram" style="color: #c436b8;"></i>
+                                       </div>
+                                       <div class="copyright text-center">
+                                        &copy; Copyright  <strong> Cake Bakery. </strong> All Rights Reserved
+                                       </div>
+                                       <div class="credite text-center">
+                                        Designed by <a href="#"><span>Delicious Cake Bakery</span></a>
+                                       </div>
+                           </foote rdata-aos="fade-up"
+                           data-aos-duration="1500">
+                           <a href="#"class="arrow"><i class="fa-solid fa-circle-arrow-up fa-2xl" style="color: #FFD43B;"></i></a>
+
+
+
+
+
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
